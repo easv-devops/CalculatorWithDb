@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    stdin_open: true
+    tty: true
+    ports:
+      - "8888:80"
+    environment:
+      ConnectionStrings__Default: "Host=abul.db.elephantsql.com;Port=5432;Database=${DB_NAME};Username=${DB_USER};Password=${DB_PASS}"
