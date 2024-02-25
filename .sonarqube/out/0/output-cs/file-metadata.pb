@@ -1,0 +1,11 @@
+6
+-C:\DevOpsProjects\Calculator\CalculatorLog.csutf-8=
+4C:\DevOpsProjects\Calculator\CalculatorRepository.csutf-8:
+1C:\DevOpsProjects\Calculator\CalculatorService.csutf-80
+'C:\DevOpsProjects\Calculator\Program.csutf-8;
+2C:\DevOpsProjects\Calculator\Tests\GlobalUsings.csutf-8m
+bC:\DevOpsProjects\Calculator\Tests\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8V
+KC:\DevOpsProjects\Calculator\Tests\obj\Debug\net8.0\Tests.GlobalUsings.g.csutf-88
+/C:\DevOpsProjects\Calculator\Tests\UnitTest1.csutf-82
+)C:\DevOpsProjects\Calculator\Utilities.csutf-8U
+JC:\DevOpsProjects\Calculator\obj\Debug\net8.0\Calculator.GlobalUsings.g.csutf-8
