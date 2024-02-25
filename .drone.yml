@@ -8,6 +8,7 @@ steps:
     commands:
       - dotnet sonarscanner begin /k:"easv-devops_CalculatorWithDb_AY3hwYYREVvRW2O60ELe" /d:sonar.host.url="http://sonar.setgo.dk:9000"  /d:sonar.token="sqp_478135e4b3648233c52af52e191e4bd9369db857"
       - dotnet build Calculator.csproj
+      - dotnet-coverage collect "dotnet test" -f xml -o coverage.xml
       - dotnet sonarscanner end /d:sonar.token="sqp_478135e4b3648233c52af52e191e4bd9369db857"
 
   - name: build
