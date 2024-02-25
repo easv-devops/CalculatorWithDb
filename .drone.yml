@@ -8,15 +8,11 @@ steps:
     commands: 
       - dotnet build Calculator.csproj
 
-  - name: retrieve-secret
-    image: plugins/secrets
-    settings:
-      driver: drone
-      name: pgconn
-      target: PGCONN
-
   - name: test
     image: mcr.microsoft.com/dotnet/sdk:8.0
+    environment:
+      pgconn:
+        from_secret: pgconn
     commands: 
       - cd Tests
-      - pgconn=$PGCONN dotnet test
+      - dotnet test
