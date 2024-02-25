@@ -5,13 +5,9 @@ name: integration
 steps:
   - name: code-analysis
     image: boulundeasv/dotnet-sdk-with-java
-    environment:
-      pgconn:
-        from_secret: pgconn
     commands:
-      - dotnet sonarscanner begin /k:"easv-devops_CalculatorWithDb_AY3hwYYREVvRW2O60ELe" /d:sonar.host.url="http://sonar.setgo.dk:9000"  /d:sonar.token="sqp_478135e4b3648233c52af52e191e4bd9369db857"  /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml  /d:sonar.qualitygate.wait=true
-      - dotnet build Calculator.csproj --no-incremental
-      - dotnet-coverage collect "dotnet test Calculator.csproj" -f xml -o "coverage.xml"
+      - dotnet sonarscanner begin /k:"easv-devops_CalculatorWithDb_AY3hwYYREVvRW2O60ELe" /d:sonar.host.url="http://sonar.setgo.dk:9000"  /d:sonar.token="sqp_478135e4b3648233c52af52e191e4bd9369db857"
+      - dotnet build Calculator.csproj
       - dotnet sonarscanner end /d:sonar.token="sqp_478135e4b3648233c52af52e191e4bd9369db857"
 
   - name: build
