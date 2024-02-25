@@ -12,7 +12,7 @@ public class CalculatorRepository
     using (var connection = new NpgsqlConnection(connectionString))
     {
         await connection.OpenAsync();
-        var command = new NpgsqlCommand("SELECT * FROM calculator_logs", connection);
+        var command = new NpgsqlCommand("SELECT * FROM calculatorapp.calculator_logs", connection);
 
         using (var reader = await command.ExecuteReaderAsync())
         {
@@ -37,7 +37,7 @@ public class CalculatorRepository
         using (var connection = new NpgsqlConnection(connectionString))
         {
             await connection.OpenAsync();
-            var command = new NpgsqlCommand("INSERT INTO calculator_logs (Operand1, Operand2, Operation, Result) VALUES (@n1, @n2, @operation, @result)", connection);
+            var command = new NpgsqlCommand("INSERT INTO calculatorapp.calculator_logs (Operand1, Operand2, Operation, Result) VALUES (@n1, @n2, @operation, @result)", connection);
             command.Parameters.AddWithValue("@n1", n1);
             command.Parameters.AddWithValue("@n2", n2);
             command.Parameters.AddWithValue("@operation", operation);

@@ -7,7 +7,7 @@ internal class Program
     
     private static async Task Main(string[] args)
     {
-
+        Console.WriteLine("Attempting connection with: " + Environment.GetEnvironmentVariable("pgconn")!);
         Console.WriteLine("WELCOME TO THE CALCULATOR APP");
         var calculator = new CalculatorService();
         bool running = true;

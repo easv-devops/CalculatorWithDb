@@ -8,4 +8,4 @@ services:
     ports:
       - "8888:80"
     environment:
-      ConnectionStrings__Default: "Host=abul.db.elephantsql.com;Port=5432;Database=${DB_NAME};Username=${DB_USER};Password=${DB_PASS}"
+      ConnectionStrings__Default: "Host=snuffleupagus.db.elephantsql.com;Port=5432;Database=${DB_NAME};Username=${DB_USER};Password=${DB_PASS}"
